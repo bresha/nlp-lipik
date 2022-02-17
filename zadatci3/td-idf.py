@@ -7,3 +7,8 @@ vectorizer.fit(text)
 
 print(vectorizer.vocabulary_)
 print(vectorizer.idf_)
+
+print('-' * 15)
+
+vector = vectorizer.transform(text)
+print(vector.toarray())
