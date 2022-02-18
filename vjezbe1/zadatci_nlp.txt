@@ -1,0 +1,58 @@
+1. Izaberi knjigu. To je danas tvoja najdraža knjiga. Učitaj je u varijablu.
+
+2. Popiši sve znakove koji se pojavljuju u tvojoj najdražoj knjizi.
+
+3. Odluči koje znakove želiš zadržati. Očisti svoju knjigu
+od nepoželjnih znakova. Jasno, ovaj će korak ovisit o tvojim namjerama.
+(I o sljedećim zadatcima.) Ne spremati promjene u file.
+
+4. Napravi funkciju koja će u odabranoj knjizi prebrojati koliko ima kojih slova.
+Podijeli statistiku sa svojim najdražim kolegom/kolegicom. Usporedite statistike.
+
+5. Učitaj slučajnih 100 znakova (slijedno, i ne broje se space-ovi), prebroj koliko ima kojih slova. 
+Usporedi s rezultatima nad cijelom knjigom. Zanimljivo? Što se događa sa slučajnih 1000 znakova?
+
+6. Primjeni (4) na nekoj drugoj knjizi.
+
+7. Primjeni (4) na svim knjigama. Zapiši statistiku usporedno, u tablici. U lijepom formatu.
+
+8. Koliko ima riječi koje počinju prvim slovom tvog imena u tvojoj najdražoj knjizi?
+
+9. Koliko ih ima koje počinju slovom 'nj'?
+
+10. Koliko je riječi u kojima nalazimo sljedove znakova 'do', 're', 'mi', 'fa', 'sol', 'la' i 'ti'?
+
+11. Koliko je riječi koje počinju velikim slovom, a nisu na početku rečenice?
+
+12. Koliko se riječi rimuje s riječi 'kafa'?
+
+13. Koliko se često javlja riječ 'pauza', u bilo kojem padežu?
+
+14. Izaberi svoju najdražu riječ. Koliko se često pojavljuje u štivu?
+
+15. Koja je prosječna duljina riječi u odabranoj knjizi?
+
+16. Koliko je riječi duljine točno sedam znakova?
+
+17. Kolika je prosječna duljina u drugim knjigama?
+
+18. Koja je najčešća riječ u svakoj od knjiga?
+
+19. Najčešća riječ u svim knjigama zajedno?
+
+69. Na serveru se nalazi fajl čudnog imena. Sa čudnim sadržajem.
+Tako je - fajl je enkriptiran. Kao i njegovo ime.
+Kako se zove fajl? Koji je njegov sadržaj? Nitko ne zna. Osim jednog čovjeka.
+Tko prvi (nakon Darka i Matije) dozna ime fajla, kao i što je to što on sadržava, zaradit će čokoladu po želji.
+Ako netko riješi prije Darka (ili prije Matije) - ima zagarantiran obrok u Nadi s predavačima. 
+Tko pogodi i ne kaže nikome može računat na isto.
+Ako netko nauči enkriptirani tekst naizust, bit će specijalno nagrađen.
+
+Isključivo je dozvoljeno korištenje samo core python biblioteka, te je priložen funkcionirajući, vlastiti python kod, 
+koji prevodi misteriozni tekst nužan uvjet za pobjedu. Budite pošteni.
+
+Ako rješavate u timu, tad tim odlučuje tko je osoba koja odnosi nagradu.
+
+P.S. Nadam se da je zadatak uopće rješiv.
+
+P.P.S. Imate vremena do 1.5.2022.
