@@ -1,0 +1,12 @@
+{"intents":
+    [
+            {"tag":"pozdrav",
+             "patterns":["bok","hej","dobar dan","dobro jutro"],
+             "responses":["zdravo","dan","bok"]
+            },
+            {"tag":"odzdrav",
+             "patterns":["doviđenja","đenja","bok"],
+             "responses":["čujemo se","bok","vidimo se"]
+            }
+    ]
+}

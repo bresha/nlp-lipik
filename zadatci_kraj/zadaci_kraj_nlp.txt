@@ -1,0 +1,86 @@
+1. Implementirajte spam klasifikator sa prezentacije
+2. Implementirajte chatbot baziran na strojnom učenju:
+
+import string
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+labels = []
+questions = []
+for line in open('que.txt', encoding="utf8"):
+    labels.append(line.strip().split(" ")[-1])
+    questions.append(" ".join(line.strip().split(" ")[:-1]))
+
+answers = []
+for line in open('ans.txt', encoding="utf8"):
+    answers.append(line.strip())
+
+from sklearn.feature_extraction.text import CountVectorizer
+bow_vectorizer = CountVectorizer()
+training_vectors = bow_vectorizer.fit_transform(questions)
+
+classifier = MultinomialNB()
+classifier.fit(training_vectors, labels)
+
+def generate_response(sentence):
+    input_vector = bow_vectorizer.transform([sentence])
+    predict = classifier.predict(input_vector)
+    index = int(predict[0])
+    return answers[index-1]
+
+generate_response('hi')
+
+
+3. Implementirajte chatbot baziran na dubokom učenju:
+
+a) Kreirajte proizvoljni intent json file (dataset)
+
+{"intents":
+[
+		{"tag":"pozdrav",
+		 "patterns":["bok","hej","dobar dan","dobro jutro"],
+		 "responses":["zdravo","dan","bok"]
+		},
+		{"tag":"odzdrav",
+		 "patterns":["doviđenja","đenja","bok"],
+		 "responses":["čujemo se","bok","vidimo se"]
+		}
+]
+}
+
+b) Priprema podataka
+- Kreirati praznu listu koja će se sastojati od svih patterna
+- Kreirati praznu listu koja će sadržavati sve klase koje odgovaraju pojedinom patternu
+- Koristi petlju unutar petlje; prođi kroz sve intentove, pa zatim kroz sve patterne u intentovima
+- Zatim appendaj patterne u već kreiranu praznu listu koja će se sastojati od svih patterna
+- Zatim appendaj tagove unutar intentova u već kreiranu praznu listu koja će sadržavati sve klase koje odgovaraju pojedinom patternu
+- Zatim izađi iz druge petlje, te u novo kreiranu praznu listu appendaj odgovore iz
+intentova
+- Zatim u novo kreiranu praznu listu „klase“ appendaj sve unique klase iz intentova, te prebroji koliko ih ima
+- Pretvori podatke unutar liste koja sadržava sve klase koje odgovaraju pojedinom
+patternu u formu razumljivu modelu (za to koristi sklearn-ov LabelEncoder())
+- Nakon pretvorbe fitaj tu novu formu podataka, te ih naposlijetku normaliziraj koristeći funkciju transform()
+
+c) Vektorizacija
+- Vektorizaciju ćemo izvršiti koristeći postojeću klasu „Tokenizer“ unutar koje možemo definirati veličinu vokabulara, te još nekolicinu argumenata
+- Kada se koristi ta klasa u postupku (pred)obrade podataka, onda po defaultu uklanja
+interpunkcijske znakove, pretvara tekst u nizove riječi odjeljenih razmakom, te onda te nizove razdvaja u liste tokena koje će se onda indeksirati/vektorizirati
+- Nakon definiranja klase i njezinih argumenata, pozvati fit_on_texts, pozvati texts_to_sequences, te pozvati pad_sequences
+
+d) Deep learning model
+- Koristi sekvencijalni model
+- Dodati Embedding layer (velicina_vokabulara, embedding_dimenzije, duljina_inputa)
+- Dodati Pooling
+- Dodati Dense (16, relu)
+- Dodati Dense (16, relu)
+- Dodati Dense (len(labele), softmax)
+- Kompajlirati model (loss,optimizer,metrics)
+- Fitati model
+
+4. Prođite kroz Ivanove prezentacije
+
+5. Prođite kroz Ivanov zadatak
+
+6. Prođite kroz prezetaciju od Daria
+
+7. Prođite kroz zadatak od Daria
